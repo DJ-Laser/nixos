@@ -15,6 +15,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     /*
     agenix = {
       url = "github:ryantm/agenix";
@@ -51,6 +56,10 @@
 
       overlays = with inputs; [
         niri.overlays.niri
+      ];
+
+      systems.modules.nixos = with inputs; [
+        stylix.nixosModules.stylix
       ];
 
       homes.modules = with inputs; [
