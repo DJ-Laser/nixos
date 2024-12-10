@@ -46,7 +46,7 @@
   hardware.bluetooth.powerOnBoot = true;
 
   djlaser = {
-    desktop.plasma-6.enable = true;
+    desktops.plasma-6.enable = true;
     apps.steam.enable = true;
   };
 

@@ -7,9 +7,9 @@
   namespace,
   ...
 }: let
-  cfg = config.${namespace}.desktop.plasma-6;
+  cfg = config.${namespace}.desktops.plasma-6;
 in {
-  options.${namespace}.desktop.plasma-6 = {
+  options.${namespace}.desktops.plasma-6 = {
     enable = lib.mkEnableOption "enables the KDE Plasma 6 desktop environment";
   };
 

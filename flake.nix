@@ -1,20 +1,33 @@
 {
-  description = "A simple NixOS flake";
+  description = "DJ_Laser's NixOS config";
 
   inputs = {
     # NixOS official package source, using the unstable branch
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    snowfall-lib.url = "github:snowfallorg/lib";
-    snowfall-lib.inputs.nixpkgs.follows = "nixpkgs";
+    snowfall-lib = {
+      url = "github:snowfallorg/lib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    #agenix.url = "github:ryantm/agenix";
-    #agenix.inputs.nixpkgs.follows = "nixpkgs";
-    # Don't download darwin deps (macos cringe)
-    #agenix.inputs.darwin.follows = "";
+    /*
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      #Don't download darwin deps (macos cringe)
+      inputs.darwin.follows = "";
+    };
+    */
+
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
@@ -33,12 +46,15 @@
       };
 
       channels-config = {
-        # Allow unfree packages.
         allowUnfree = true;
       };
 
-      systems.modules.nuxos = with inputs; [
-        home-manager.nixosModules.home-manager
+      overlays = with inputs; [
+        niri.overlays.niri
+      ];
+
+      systems.modules.nixos = with inputs; [
+        niri.nixosModules.niri
       ];
 
       systems.hosts.nix-desktop.modules = with inputs; [
