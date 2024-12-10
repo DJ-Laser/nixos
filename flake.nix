@@ -53,8 +53,8 @@
         niri.overlays.niri
       ];
 
-      systems.modules.nixos = with inputs; [
-        niri.nixosModules.niri
+      homes.modules = with inputs; [
+        niri.homeModules.niri
       ];
 
       systems.hosts.nix-desktop.modules = with inputs; [

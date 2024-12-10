@@ -13,6 +13,7 @@
 
   djlaser = {
     apps.alacrity.enable = true;
+    desktops.niri.enable = true;
   };
 
   home.packages = with pkgs; [
