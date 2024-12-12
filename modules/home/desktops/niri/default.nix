@@ -16,6 +16,8 @@ in {
   config = lib.mkIf cfg.enable {
     programs.niri = {
       enable = true;
+
+      settings.binds = import ./config/binds.nix {actions = config.lib.niri.actions;};
     };
   };
 }

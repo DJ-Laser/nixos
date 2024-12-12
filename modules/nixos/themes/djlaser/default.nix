@@ -10,7 +10,7 @@
   cfg = config.${namespace}.themes.djlaser;
 in {
   options.${namespace}.themes.djlaser = {
-    enable = lib.mkEnableOption "enables default theme vis stylix";
+    enable = lib.mkEnableOption "enables default theme via stylix";
   };
 
   config = lib.mkIf cfg.enable {
@@ -18,7 +18,7 @@ in {
       enable = true;
       image = ../../wallpapers/rm-rf.jpg;
       polarity = "dark";
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/tomorrow-night.yaml";
 
       fonts = {
         monospace = {

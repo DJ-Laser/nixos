@@ -13,6 +13,7 @@
 
   djlaser = {
     apps.alacrity.enable = true;
+    apps.vscode.enable = true;
     desktops.niri.enable = true;
   };
 
