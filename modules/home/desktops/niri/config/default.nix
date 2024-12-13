@@ -8,13 +8,16 @@
   ...
 }: let
   cfg = config.${namespace}.desktops.niri;
-  theme = config.lib.stylix.colors
+  theme = config.lib.stylix.colors;
 in {
-  config.niri.settings = lib.mkIf cfg.enable {
+  config.programs.niri.settings = lib.mkIf cfg.enable {
     screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
+    prefer-no-csd = true;
 
     layout = {
+      focus-ring.enable = false;
       border = {
+        enable = true;
         active = {
           gradient = {
             angle = 130;

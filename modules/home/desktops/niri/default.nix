@@ -13,11 +13,17 @@ in {
     enable = lib.mkEnableOption "enables the Niri Wayland Compositor";
   };
 
-  config = lib.mkIf cfg.enable {
-    programs.niri = {
-      enable = true;
+  config = lib.mkIf (cfg.enable && true) ({
+      home.sessionVariables.NIXOS_OZONE_WL = "1";
+      stylix.targets.niri.enable = true;
 
-      settings.binds = import ./config/binds.nix {actions = config.lib.niri.actions;};
-    };
-  };
+      programs.niri = {
+        settings.binds = import ./config/binds.nix {actions = config.lib.niri.actions;};
+      };
+    }
+    // (
+      if builtins.hasAttr "programs.niri.enable" options
+      then {enable = true;}
+      else {}
+    ));
 }

@@ -60,10 +60,11 @@
 
       systems.modules.nixos = with inputs; [
         stylix.nixosModules.stylix
+        niri.nixosModules.niri
       ];
 
       homes.modules = with inputs; [
-        niri.homeModules.niri
+        #niri.homeModules.niri
       ];
 
       systems.hosts.nix-desktop.modules = with inputs; [
