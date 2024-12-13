@@ -14,6 +14,7 @@ in {
   };
 
   config = lib.mkIf (cfg.enable && true) ({
+      ${namespace}.desktops.components.swww.enable = true;
       home.sessionVariables.NIXOS_OZONE_WL = "1";
       stylix.targets.niri.enable = true;
 
