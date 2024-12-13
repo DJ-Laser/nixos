@@ -14,6 +14,12 @@ in {
     screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
     prefer-no-csd = true;
 
+    spawn-at-startup = [
+      {
+        command = ["${pkgs.xwayland-satellite}/bin/xwayland-satellite"];
+      }
+    ];
+
     layout = {
       focus-ring.enable = false;
       border = {
