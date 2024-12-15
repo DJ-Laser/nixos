@@ -18,6 +18,13 @@ in {
       enable = true;
       package = pkgs.vscode.fhs;
       enableExtensionUpdateCheck = false;
+      userSettings = {
+        "editor.tabSize" = 2;
+
+        "git.enableSmartCommit" = true;
+        "git.autofetch" = true;
+        "git.confirmSync" = false;
+      };
     };
 
     xdg.configFile."code-flags.conf".text = ''
