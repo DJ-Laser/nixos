@@ -29,8 +29,8 @@ in {
     };
 
     home.activation = {
-      setWallpaper = lib.home-manager.hm.dag.entryAfter ["writeBoundary" "installPackages"] ''
-        run swww img "${config.stylix.image}" \
+      setWallpaper = lib.home-manager.hm.dag.entryAfter ["writeBoundary"] ''
+        run ${cfg.package}/bin/swww img "${config.stylix.image}" \
           --transition-fps 60 \
           --transition-duration 2 \
           --transition-type random \
