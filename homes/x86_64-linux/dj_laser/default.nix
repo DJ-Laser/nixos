@@ -15,6 +15,7 @@
     apps.alacrity.enable = true;
     apps.vscode.enable = true;
     desktops.niri.enable = true;
+    shells.bash.enable = true;
   };
 
   home.packages = with pkgs; [
