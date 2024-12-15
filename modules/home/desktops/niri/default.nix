@@ -13,9 +13,8 @@ in {
     enable = lib.mkEnableOption "enables the Niri Wayland Compositor";
   };
 
-  config = lib.mkIf (cfg.enable && true) ({
+  config = lib.mkIf cfg.enable ({
       ${namespace}.desktops.components.swww.enable = true;
-      home.sessionVariables.NIXOS_OZONE_WL = "1";
       stylix.targets.niri.enable = true;
 
       programs.niri = {

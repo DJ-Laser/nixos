@@ -23,6 +23,8 @@ in {
     environment = {
       # xwayland-satellite
       DISPLAY = ":0";
+      # vscode and other apps don't want to default to wayland but work when forced
+      ELECTRON_OZONE_PLATFORM_HINT = "wayland";
     };
 
     layout = {
