@@ -5,10 +5,6 @@
     userEmail = "90146620+DJ-Laser@users.noreply.github.com";
   };
 
-  programs.zoxide = {
-    enable = true;
-  };
-
   programs.firefox.enable = true;
 
   djlaser = {
@@ -16,6 +12,7 @@
     apps.vscode.enable = true;
     desktops.niri.enable = true;
     shells.bash.enable = true;
+    tools.zoxide.enable = true;
   };
 
   home.packages = with pkgs; [
