@@ -20,6 +20,11 @@ in {
       }
     ];
 
+    environment = {
+      # xwayland-satellite
+      DISPLAY = ":0";
+    };
+
     layout = {
       focus-ring.enable = false;
       border = {
