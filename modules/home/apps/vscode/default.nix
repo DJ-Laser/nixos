@@ -20,10 +20,12 @@ in {
       enableExtensionUpdateCheck = false;
       userSettings = {
         "editor.tabSize" = 2;
+        "editor.formatOnSave" = true;
 
         "git.enableSmartCommit" = true;
         "git.autofetch" = true;
         "git.confirmSync" = false;
+
         "[typescript]" = {
           "editor.defaultFormatter" = "esbenp.prettier-vscode";
         };
