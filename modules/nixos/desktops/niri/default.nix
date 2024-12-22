@@ -7,13 +7,13 @@
   namespace,
   ...
 }: let
-  cfg = config.${namespace}.desktops.plasma-6;
+  cfg = config.${namespace}.desktops.niri;
 in {
   options.${namespace}.desktops.niri = {
     enable = lib.mkEnableOption "enables the Niri Wayland Compositor";
   };
 
-  config = {
+  config = lib.mkIf cfg.enable {
     programs.niri.enable = true;
   };
 }
