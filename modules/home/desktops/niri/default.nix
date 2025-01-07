@@ -18,7 +18,10 @@ in {
       stylix.targets.niri.enable = true;
 
       programs.niri = {
-        settings.binds = import ./config/binds.nix {actions = config.lib.niri.actions;};
+        settings.binds = import ./config/binds.nix {
+          inherit pkgs;
+          actions = config.lib.niri.actions;
+        };
       };
     }
     // (

@@ -299,6 +299,27 @@
         "type": "github"
       }
     },
+    "n16-shell": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1736281823,
+        "narHash": "sha256-vkG173uAm1gskUCdtQ5e5zwLL0PbY9b5lgLcBRSyYOY=",
+        "owner": "DJ-Laser",
+        "repo": "n16-shell",
+        "rev": "329623d99f20ebce574e8f0e04f88e8c61f129dd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DJ-Laser",
+        "repo": "n16-shell",
+        "type": "github"
+      }
+    },
     "niri": {
       "inputs": {
         "niri-stable": "niri-stable",
@@ -408,11 +429,33 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "n16-shell": "n16-shell",
         "niri": "niri",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
         "snowfall-lib": "snowfall-lib",
         "stylix": "stylix"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "n16-shell",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1734834660,
+        "narHash": "sha256-bm8V+Cu8rWJA+vKQnc94mXTpSDgvedyoDKxTVi/uJfw=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "b070e6030118680977bc2388868c4b3963872134",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
       }
     },
     "snowfall-lib": {

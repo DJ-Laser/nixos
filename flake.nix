@@ -34,6 +34,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    n16-shell = {
+      url = "github:DJ-Laser/n16-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
@@ -56,6 +61,7 @@
 
       overlays = with inputs; [
         niri.overlays.niri
+        n16-shell.overlays.default
       ];
 
       systems.modules.nixos = with inputs; [
