@@ -17,8 +17,10 @@
 
   home.packages = with pkgs; [
     modrinth-app
+    rustdesk
     vesktop
     slack
+    sl
   ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
