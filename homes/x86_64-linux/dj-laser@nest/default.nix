@@ -7,6 +7,8 @@
   djlaser = {
     shells.bash.enable = true;
     tools.zoxide.enable = true;
+
+    services.rustdesk-server.enable = true;
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
