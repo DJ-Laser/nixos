@@ -14,7 +14,11 @@ in {
   };
 
   config = lib.mkIf cfg.enable ({
-      ${namespace}.desktops.components.swww.enable = true;
+      ${namespace} = {
+        desktops.components.swww.enable = true;
+        desktops.components.mako.enable = true;
+      };
+
       stylix.targets.niri.enable = true;
 
       programs.niri = {
