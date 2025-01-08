@@ -7,7 +7,7 @@
   namespace,
   ...
 }: let
-  cfg = config.${namespace}.desktops.niri;
+  cfg = config.${namespace}.services.rustdesk-server;
 in {
   options.${namespace}.services.rustdesk-server = {
     enable = lib.mkEnableOption "enables the rustdesk-server systemd user unit";
