@@ -71,6 +71,7 @@
 
       homes.users."dj-laser@nest".modules = with inputs; [
         stylix.homeManagerModules.stylix
+        niri.homeModules.niri
       ];
 
       systems.hosts.nix-desktop.modules = with inputs; [
