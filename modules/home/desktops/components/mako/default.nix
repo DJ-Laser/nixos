@@ -20,8 +20,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.packages = [cfg.package];
-
     services.mako = mkIf niriCfg.enable {
       enable = true;
       package = cfg.package;

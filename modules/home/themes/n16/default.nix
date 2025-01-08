@@ -7,7 +7,7 @@
   namespace,
   ...
 }: {
-  imports = [./niri.nix];
+  imports = [./niri.nix ./mako.nix];
 
   options.${namespace}.themes.n16 = {
     enable = lib.mkEnableOption "enables the n16 theme";
