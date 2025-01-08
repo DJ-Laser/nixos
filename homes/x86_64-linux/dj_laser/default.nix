@@ -8,9 +8,12 @@
   programs.firefox.enable = true;
 
   djlaser = {
+    desktops.niri.enable = true;
+    themes.n16.enable = true;
+
     apps.alacrity.enable = true;
     apps.vscode.enable = true;
-    desktops.niri.enable = true;
+
     shells.bash.enable = true;
     tools.zoxide.enable = true;
   };

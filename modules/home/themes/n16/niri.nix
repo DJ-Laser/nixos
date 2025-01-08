@@ -7,10 +7,13 @@
   namespace,
   ...
 }: let
-  cfg = config.${namespace}.desktops.niri;
-  theme = config.lib.stylix.colors;
+  n16 = config.${namespace}.themes.n16;
+  niri = config.${namespace}.desktops.niri;
+
+  colors = config.lib.stylix.colors;
 in {
-  config.programs.niri.settings = lib.mkIf cfg.enable {
+  config.programs.niri.settings = lib.mkIf (n16.enable
+    && niri.enable) {
     screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
     prefer-no-csd = true;
 
@@ -35,16 +38,16 @@ in {
           gradient = {
             angle = 130;
             relative-to = "workspace-view";
-            from = "#${theme.base0D}";
-            to = "#${theme.base0E}";
+            from = "#${colors.base0D}";
+            to = "#${colors.base0E}";
           };
         };
         inactive = {
           gradient = {
             angle = 130;
             relative-to = "workspace-view";
-            from = "#${theme.base0D}90";
-            to = "#${theme.base0E}90";
+            from = "#${colors.base0D}90";
+            to = "#${colors.base0E}90";
           };
         };
       };
