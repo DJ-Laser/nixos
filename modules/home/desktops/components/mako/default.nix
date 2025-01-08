@@ -12,7 +12,7 @@
   niriCfg = config.${namespace}.desktops.niri;
 in {
   options.${namespace}.desktops.components.mako = {
-    enable = mkEnableOption "enables swww wallpaper engine";
+    enable = mkEnableOption "enables mako notification daemon";
     package = mkOption {
       type = types.package;
       default = pkgs.mako;
