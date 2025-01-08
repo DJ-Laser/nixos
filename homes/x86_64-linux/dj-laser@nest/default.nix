@@ -4,7 +4,7 @@
 
   programs.home-manager = {
     enable = true;
-    path = "$HOME/djlaser-flake/";
+    path = lib.mkForce "$HOME/djlaser-flake/";
   };
 
   djlaser = {
