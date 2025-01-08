@@ -1,14 +1,9 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   home.username = "dj-laser";
   home.homeDirectory = "/home/dj-laser";
 
   programs.home-manager = {
     enable = true;
-    path = lib.mkForce "$HOME/djlaser-flake/";
   };
 
   djlaser = {
