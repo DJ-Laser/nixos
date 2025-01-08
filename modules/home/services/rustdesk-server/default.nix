@@ -20,7 +20,7 @@ in {
       };
 
       Service = {
-        ExecStart = "pm2 start ${pkgs.rustdesk-server}/bin/hbbs & pm2 start ${pkgs.rustdesk-server}/bin/hbbr";
+        ExecStart = "pm2 start ${pkgs.rustdesk-server}/bin/hbbs";
       };
 
       Install = {
