@@ -19,6 +19,15 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
+    assertions = [
+      {
+        assertion = lib.path.subpath.isValid cfg.workingDirectory;
+        message = ''
+          lib.path.append: Second argument is not a valid subpath string:
+              ${lib.path.subpath.subpathInvalidReason cfg.workingDirectory}'';
+      }
+    ];
+
     systemd.user.services.rustdesk-server = {
       Unit = {
         Description = "Rustdesk Server";
@@ -26,7 +35,7 @@ in {
 
       Service = {
         ExecStart = "${pkgs.rustdesk-server}/bin/hbbs";
-        WorkingDirectory = lib.path.append config.home.homeDirectory cfg.workingDirectory;
+        WorkingDirectory = config.home.homeDirectory + ("/" + cfg.workingDirectory);
       };
 
       Install = {
