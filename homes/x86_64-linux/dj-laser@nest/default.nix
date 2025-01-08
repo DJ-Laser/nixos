@@ -2,7 +2,10 @@
   home.username = "dj-laser";
   home.homeDirectory = "/home/dj-laser";
 
-  programs.home-manager.enable = true;
+  programs.home-manager = {
+    enable = true;
+    path = "$HOME/djlaser-flake/";
+  };
 
   djlaser = {
     shells.bash.enable = true;
