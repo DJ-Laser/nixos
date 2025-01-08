@@ -28,13 +28,28 @@ in {
       }
     ];
 
-    systemd.user.services.rustdesk-server = {
+    systemd.user.services.rustdesk-signal-server = {
       Unit = {
-        Description = "Rustdesk Server";
+        Description = "Rustdesk Signaling Server";
       };
 
       Service = {
         ExecStart = "${pkgs.rustdesk-server}/bin/hbbs";
+        WorkingDirectory = config.home.homeDirectory + ("/" + cfg.workingDirectory);
+      };
+
+      Install = {
+        WantedBy = ["default.target"];
+      };
+    };
+
+    systemd.user.services.rustdesk-relay-server = {
+      Unit = {
+        Description = "Rustdesk Relay Server";
+      };
+
+      Service = {
+        ExecStart = "${pkgs.rustdesk-server}/bin/hbbr";
         WorkingDirectory = config.home.homeDirectory + ("/" + cfg.workingDirectory);
       };
 
