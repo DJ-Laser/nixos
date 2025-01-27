@@ -19,7 +19,7 @@
   };
 
   home.packages = with pkgs; [
-    modrinth-app
+    # modrinth-app
     rustdesk
     vesktop
     slack

@@ -79,5 +79,9 @@
         nixos-hardware.nixosModules.common-gpu-nvidia-nonprime
         nixos-hardware.nixosModules.common-cpu-intel
       ];
+
+      systems.hosts.laser-book.modules = with inputs; [
+        nixos-hardware.nixosModules.framework-13th-gen-intel
+      ];
     };
 }

@@ -42,9 +42,6 @@
 
   services.printing.enable = true;
 
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
-
   djlaser = {
     desktops.niri.enable = true;
     apps.steam.enable = true;
