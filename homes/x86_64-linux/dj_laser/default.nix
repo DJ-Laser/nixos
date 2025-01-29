@@ -19,6 +19,7 @@
   };
 
   home.packages = with pkgs; [
+    brightnessctl
     # modrinth-app
     rustdesk
     vesktop
