@@ -20,6 +20,9 @@ in {
       polarity = "dark";
       base16Scheme = "${pkgs.base16-schemes}/share/themes/tomorrow-night.yaml";
 
+      cursor.package = pkgs.capitaine-cursors;
+      cursor.name = "capitaine-cursors";
+
       fonts = {
         monospace = {
           package = pkgs.nerd-fonts.jetbrains-mono;

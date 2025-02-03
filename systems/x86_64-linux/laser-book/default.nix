@@ -18,6 +18,7 @@
   services.hardware.openrgb.enable = true;
   services.cloudflare-warp.enable = true;
   services.printing.enable = true;
+  services.fwupd.enable = true;
 
   djlaser = {
     desktops.niri.enable = true;
