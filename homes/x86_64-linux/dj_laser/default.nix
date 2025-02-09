@@ -21,7 +21,6 @@
   home.packages = with pkgs; [
     brightnessctl
     # modrinth-app
-    rustdesk
     vesktop
     slack
     sl
