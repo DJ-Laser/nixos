@@ -5,7 +5,7 @@
 with actions; {
   "Mod+Shift+Slash".action = show-hotkey-overlay;
   "Mod+T".action = spawn "alacritty";
-  "Mod+D".action = spawn "${pkgs.n16-shell}/bin/n16-shell";
+  "Mod+D".action = spawn "${pkgs.n16-shell}/bin/n16";
 
   "Print".action = screenshot;
   "Ctrl+Print".action = screenshot-screen;

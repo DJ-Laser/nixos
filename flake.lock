@@ -303,11 +303,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1736902866,
-        "narHash": "sha256-DqOEnKSPZjq2+cR7EtB1mqv8Axj0JTc4dEBTglMAcEs=",
+        "lastModified": 1740205983,
+        "narHash": "sha256-Nb6uX2PKbbIiZYYF9x1yw94zcIMQxTyh6bl1m49CCBg=",
         "owner": "DJ-Laser",
         "repo": "n16-shell",
-        "rev": "70fed7a50e816a6d73c74724eaef0a51fbf3cece",
+        "rev": "b00b4e823c24b538a1ce2601444e77c83035df7c",
         "type": "github"
       },
       "original": {

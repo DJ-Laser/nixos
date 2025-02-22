@@ -17,6 +17,7 @@ in {
       ${namespace} = {
         desktops.components.swww.enable = true;
         desktops.components.mako.enable = true;
+        desktops.components.n16-shell.enable = true;
       };
 
       stylix.targets.niri.enable = true;
