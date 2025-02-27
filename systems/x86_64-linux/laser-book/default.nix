@@ -9,6 +9,13 @@
     ./hardware.nix
   ];
 
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      vpl-gpu-rt
+    ];
+  };
+
   services.openssh = {
     enable = true;
     ports = [22];
