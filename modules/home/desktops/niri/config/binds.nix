@@ -20,6 +20,11 @@ with actions; {
   "XF86AudioLowerVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-";
   "XF86AudioMute".action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle";
 
+  "XF86AudioPlay".action = spawn "playerctl" "play-pause";
+  "XF86AudioStop".action = spawn "playerctl" "stop";
+  "XF86AudioPrev".action = spawn "playerctl" "previous";
+  "XF86AudioNext".action = spawn "playerctl" "next";
+
   "Mod+Left".action = focus-column-left;
   "Mod+Down".action = focus-window-or-workspace-down;
   "Mod+Up".action = focus-window-or-workspace-up;

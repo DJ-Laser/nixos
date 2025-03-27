@@ -6,6 +6,7 @@
   };
 
   programs.firefox.enable = true;
+  services.mpris-proxy.enable = true;
 
   djlaser = {
     desktops.niri.enable = true;
@@ -20,6 +21,7 @@
 
   home.packages = with pkgs; [
     brightnessctl
+    playerctl
     # modrinth-app
     vesktop
     slack
