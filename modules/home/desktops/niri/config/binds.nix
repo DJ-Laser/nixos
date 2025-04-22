@@ -34,6 +34,15 @@ with actions; {
   "Mod+K".action = focus-window-or-workspace-up;
   "Mod+L".action = focus-column-right;
 
+  "Mod+Shift+Left".action = focus-monitor-left;
+  "Mod+Shift+Down".action = focus-window-or-monitor-down;
+  "Mod+Shift+Up".action = focus-window-or-monitor-up;
+  "Mod+Shift+Right".action = focus-monitor-right;
+  "Mod+Shift+H".action = focus-monitor-left;
+  "Mod+Shift+J".action = focus-window-or-monitor-down;
+  "Mod+Shift+K".action = focus-window-or-monitor-up;
+  "Mod+Shift+L".action = focus-monitor-right;
+
   "Mod+Ctrl+Left".action = move-column-left;
   "Mod+Ctrl+Down".action = move-window-down-or-to-workspace-down;
   "Mod+Ctrl+Up".action = move-window-up-or-to-workspace-up;
@@ -42,6 +51,15 @@ with actions; {
   "Mod+Ctrl+J".action = move-window-down-or-to-workspace-down;
   "Mod+Ctrl+K".action = move-window-up-or-to-workspace-up;
   "Mod+Ctrl+L".action = move-column-right;
+
+  "Mod+Ctrl+Shift+Left".action = move-column-to-monitor-left;
+  "Mod+Ctrl+Shift+Down".action = move-column-to-monitor-down;
+  "Mod+Ctrl+Shift+Up".action = move-column-to-monitor-up;
+  "Mod+Ctrl+Shift+Right".action = move-column-to-monitor-right;
+  "Mod+Ctrl+Shift+H".action = move-column-to-monitor-left;
+  "Mod+Ctrl+Shift+J".action = move-column-to-monitor-down;
+  "Mod+Ctrl+Shift+K".action = move-column-to-monitor-up;
+  "Mod+Ctrl+Shift+L".action = move-column-to-monitor-right;
 
   "Mod+Home".action = focus-column-first;
   "Mod+End".action = focus-column-last;
