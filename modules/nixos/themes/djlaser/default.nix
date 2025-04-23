@@ -22,6 +22,7 @@ in {
 
       cursor.package = pkgs.capitaine-cursors;
       cursor.name = "capitaine-cursors";
+      cursor.size = 32;
 
       fonts = {
         monospace = {

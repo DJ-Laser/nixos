@@ -17,21 +17,23 @@ in {
     programs.vscode = {
       enable = true;
       package = pkgs.vscode.fhs;
-      enableExtensionUpdateCheck = false;
-      userSettings = {
-        "editor.tabSize" = 2;
-        "editor.formatOnSave" = true;
+      profiles.default = {
+        enableExtensionUpdateCheck = false;
+        userSettings = {
+          "editor.tabSize" = 2;
+          "editor.formatOnSave" = true;
 
-        "git.enableSmartCommit" = true;
-        "git.autofetch" = true;
-        "git.confirmSync" = false;
+          "git.enableSmartCommit" = true;
+          "git.autofetch" = true;
+          "git.confirmSync" = false;
 
-        "[typescript]" = {
-          "editor.defaultFormatter" = "esbenp.prettier-vscode";
-        };
+          "[typescript]" = {
+            "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          };
 
-        "[typescriptreact]" = {
-          "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          "[typescriptreact]" = {
+            "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          };
         };
       };
     };

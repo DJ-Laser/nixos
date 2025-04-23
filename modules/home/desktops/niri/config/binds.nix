@@ -8,7 +8,8 @@ with actions; {
   "Mod+D".action = spawn "${pkgs.n16-shell}/bin/n16";
 
   "Print".action = screenshot;
-  "Ctrl+Print".action = screenshot-screen;
+  # FIXME niri-flake broke screenshot-screen, uncomment after upstream fixes
+  # "Ctrl+Print".action = screenshot-screen;
   "Alt+Print".action = screenshot-window;
 
   "Mod+Shift+E".action = quit;
