@@ -69,12 +69,6 @@
         niri.nixosModules.niri
       ];
 
-      homes.users."dj-laser@nest".modules = with inputs; [
-        stylix.homeManagerModules.stylix
-        niri.homeModules.niri
-        niri.homeModules.stylix
-      ];
-
       systems.hosts.nix-desktop.modules = with inputs; [
         nixos-hardware.nixosModules.common-gpu-nvidia-nonprime
         nixos-hardware.nixosModules.common-cpu-intel
