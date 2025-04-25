@@ -16,7 +16,7 @@ in {
   config = lib.mkIf cfg.enable {
     stylix = {
       enable = true;
-      image = ../../wallpapers/rm-rf.jpg;
+      image = ../../wallpapers/colorful-planets.jpg;
       polarity = "dark";
       base16Scheme = "${pkgs.base16-schemes}/share/themes/tomorrow-night.yaml";
 
