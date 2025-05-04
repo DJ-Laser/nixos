@@ -26,6 +26,9 @@ with actions; {
   "XF86AudioPrev".action = spawn "playerctl" "previous";
   "XF86AudioNext".action = spawn "playerctl" "next";
 
+  "XF86MonBrightnessDown".action = spawn "brightnessctl" "s" "-n" "2.5%-";
+  "XF86MonBrightnessUp".action = spawn "brightnessctl" "s" "2.5%+";
+
   "Mod+Left".action = focus-column-left;
   "Mod+Down".action = focus-window-or-workspace-down;
   "Mod+Up".action = focus-window-or-workspace-up;
