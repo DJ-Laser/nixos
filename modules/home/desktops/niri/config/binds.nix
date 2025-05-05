@@ -7,7 +7,7 @@ in
   with actions; {
     "Mod+Shift+Slash".action = show-hotkey-overlay;
     "Mod+T".action = spawn "alacritty";
-    "Mod+D".action = spawn n16;
+    "Mod+D".action = spawn n16 "launcher" "open";
 
     "Print".action = screenshot;
     # FIXME niri-flake broke screenshot-screen, uncomment after upstream fixes
