@@ -24,7 +24,7 @@ in {
 
     programs.niri = mkIf niriCfg.enable {
       settings.spawn-at-startup = [
-        {command = ["${cfg.package}/bin/n16" "--daemon"];}
+        {command = ["${cfg.package}/bin/n16-daemon"];}
       ];
     };
   };
