@@ -17,7 +17,7 @@ in {
 
       isNormalUser = true;
       group = "users";
-      extraGroups = ["networkmanager" "wheel"];
+      extraGroups = ["networkmanager" "wheel" "dialout"];
     };
   };
 }
