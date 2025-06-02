@@ -12,7 +12,9 @@
 in {
   config.services.mako = lib.mkIf (n16.enable
     && mako.enable) {
-    borderSize = 2;
-    anchor = "bottom-right";
+    settings = {
+      borderSize = 2;
+      anchor = "bottom-right";
+    };
   };
 }
