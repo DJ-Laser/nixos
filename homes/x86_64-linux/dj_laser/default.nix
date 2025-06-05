@@ -14,6 +14,7 @@
 
     apps.alacrity.enable = true;
     apps.vscode.enable = true;
+    apps.btop.enable = true;
 
     shells.bash.enable = true;
     tools.zoxide.enable = true;
