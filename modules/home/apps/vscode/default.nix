@@ -34,14 +34,6 @@ in {
           "[typescriptreact]" = {
             "editor.defaultFormatter" = "esbenp.prettier-vscode";
           };
-
-          "java.compile.nullAnalysis.mode" = "automatic";
-          "java.configuration.updateBuildConfiguration" = "automatic";
-          "spotlessGradle.diagnostics.enable" = false;
-          "spotlessGradle.format.enable" = true;
-          "[java]" = {
-            "editor.defaultFormatter" = "richardwillis.vscode-spotless-gradle";
-          };
         };
       };
     };
