@@ -22,6 +22,7 @@ in {
         userSettings = {
           "editor.tabSize" = 2;
           "editor.formatOnSave" = true;
+          "editor.linkedEditing" = true;
 
           "git.enableSmartCommit" = true;
           "git.autofetch" = true;
