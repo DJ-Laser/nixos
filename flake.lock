@@ -67,6 +67,28 @@
         "type": "github"
       }
     },
+    "fenix": {
+      "inputs": {
+        "nixpkgs": [
+          "homeslashmusic",
+          "nixpkgs"
+        ],
+        "rust-analyzer-src": "rust-analyzer-src"
+      },
+      "locked": {
+        "lastModified": 1752561972,
+        "narHash": "sha256-pPqES/udciKmKo422mfwRQ3YzjUCVyCTOsgZYA1xh+g=",
+        "owner": "nix-community",
+        "repo": "fenix",
+        "rev": "d17ca03c15660ecb8e5a01ca34e441f594feec62",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "fenix",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -294,6 +316,27 @@
         "type": "github"
       }
     },
+    "homeslashmusic": {
+      "inputs": {
+        "fenix": "fenix",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1753384284,
+        "narHash": "sha256-E7oRv6Obug5Oo2ZcPXCTOQt55MFo7eN/XjdrXk+18TA=",
+        "owner": "DJ-Laser",
+        "repo": "homeslashmusic",
+        "rev": "87a7ed6a5d08c3d4580317521342f893a9435bc8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DJ-Laser",
+        "repo": "homeslashmusic",
+        "type": "github"
+      }
+    },
     "n16-shell": {
       "inputs": {
         "nixpkgs": [
@@ -450,12 +493,30 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "homeslashmusic": "homeslashmusic",
         "n16-shell": "n16-shell",
         "niri": "niri",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
         "snowfall-lib": "snowfall-lib",
         "stylix": "stylix"
+      }
+    },
+    "rust-analyzer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1752475356,
+        "narHash": "sha256-V2nHrCJ0/Pv30j8NWJ4GfDlaNzfkOdYI0jS69GdVpq8=",
+        "owner": "rust-lang",
+        "repo": "rust-analyzer",
+        "rev": "e10d64eb402a25a32d9f1ef60cacc89d82a01b85",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rust-lang",
+        "ref": "nightly",
+        "repo": "rust-analyzer",
+        "type": "github"
       }
     },
     "rust-overlay": {

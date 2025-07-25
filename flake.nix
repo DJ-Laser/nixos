@@ -39,6 +39,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    homeslashmusic = {
+      url = "github:DJ-Laser/homeslashmusic";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
@@ -62,6 +67,7 @@
       overlays = with inputs; [
         niri.overlays.niri
         n16-shell.overlays.default
+        homeslashmusic.overlays.default
       ];
 
       systems.modules.nixos = with inputs; [
