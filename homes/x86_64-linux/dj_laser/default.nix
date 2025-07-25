@@ -15,6 +15,8 @@
     apps.alacrity.enable = true;
     apps.vscode.enable = true;
     apps.btop.enable = true;
+    apps.ripgrep.enable = true;
+    apps.fd.enable = true;
     apps.homeslashmusic.enable = true;
 
     shells.bash.enable = true;
@@ -31,8 +33,6 @@
     sl
     prismlauncher
     yazi
-    fd
-    ripgrep
   ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
