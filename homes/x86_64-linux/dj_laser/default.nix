@@ -6,7 +6,11 @@
   };
 
   programs.firefox.enable = true;
+  programs.ripgrep.enable = true;
+  programs.fd.enable = true;
+
   services.mpris-proxy.enable = true;
+  services.playerctld.enable = true;
 
   djlaser = {
     desktops.niri.enable = true;
@@ -15,8 +19,7 @@
     apps.alacrity.enable = true;
     apps.vscode.enable = true;
     apps.btop.enable = true;
-    apps.ripgrep.enable = true;
-    apps.fd.enable = true;
+    apps.yazi.enable = true;
     apps.homeslashmusic.enable = true;
 
     shells.bash.enable = true;
