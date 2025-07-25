@@ -24,6 +24,8 @@
 
     shells.bash.enable = true;
     tools.zoxide.enable = true;
+
+    services.syncthing.enable = true;
   };
 
   home.packages = with pkgs; [
