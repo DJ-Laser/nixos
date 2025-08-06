@@ -98,8 +98,8 @@ in
     "Mod+Shift+F".action = fullscreen-window;
     "Mod+C".action = center-column;
 
-    "Mod+Comma".action = consume-window-into-column;
-    "Mod+Period".action = expel-window-from-column;
+    "Mod+Comma".action = consume-or-expel-window-left;
+    "Mod+Period".action = consume-or-expel-window-right;
 
     "Mod+WheelScrollDown" = {
       cooldown-ms = 150;
