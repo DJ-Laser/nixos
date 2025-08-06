@@ -27,6 +27,10 @@ in {
           laser-book = {
             id = "TSEDB76-4JPPNAX-ZE5IVBR-2IOZYWR-SQIRNIN-JR4KSDK-OJB4GOG-UCOU4AK";
           };
+
+          pixel = {
+            id = "PO4DNS7-3ND5TNH-BGOAROM-V3Q64EK-EL7VLGS-6ISCNYV-TWROR4R-V3BLRAC";
+          };
         };
 
         folders = {
@@ -35,7 +39,7 @@ in {
             path = "~/Music";
             label = "Music";
 
-            devices = ["nix-desktop" "laser-book"];
+            devices = ["nix-desktop" "laser-book" "pixel"];
           };
         };
       };
