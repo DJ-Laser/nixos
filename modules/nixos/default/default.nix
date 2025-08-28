@@ -34,6 +34,8 @@
       vim
       wget
       curl
+      zip
+      unzip
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];

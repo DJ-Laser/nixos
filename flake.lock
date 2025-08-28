@@ -324,11 +324,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1754462908,
-        "narHash": "sha256-NcfNviSP80IeJdbuu2fVMjvP8lCB/m6h1QY3Hvot/yE=",
+        "lastModified": 1756390527,
+        "narHash": "sha256-8Wf0oVIWpzO/WMOGqN9yvcYVD74WsoSxJa4OW5UG094=",
         "owner": "DJ-Laser",
         "repo": "homeslashmusic",
-        "rev": "c3013162ed281c2c38ca1ba413fdae3b0e4e4acf",
+        "rev": "c1737c951eae51ea7fb3ca46c2f77987f1344a28",
         "type": "github"
       },
       "original": {
