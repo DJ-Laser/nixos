@@ -24,7 +24,7 @@ in {
 
       programs.niri = {
         settings.binds = import ./config/binds.nix {
-          inherit pkgs;
+          inherit lib pkgs;
           actions = config.lib.niri.actions;
         };
       };
