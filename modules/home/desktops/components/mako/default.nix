@@ -9,7 +9,6 @@
 }: let
   inherit (lib) types mkEnableOption mkOption mkIf;
   cfg = config.${namespace}.desktops.components.mako;
-  niriCfg = config.${namespace}.desktops.niri;
 in {
   options.${namespace}.desktops.components.mako = {
     enable = mkEnableOption "enables mako notification daemon";
@@ -20,7 +19,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    services.mako = mkIf niriCfg.enable {
+    services.mako = {
       enable = true;
       package = cfg.package;
     };
