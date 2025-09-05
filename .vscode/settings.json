@@ -1,0 +1,31 @@
+{
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "nixd",
+  "nix.serverSettings": {
+    "nixd": {
+      "formatting": {
+        "command": [ "alejandra" ]
+      },
+
+      "diagnostic": {
+        "suppress": [
+          "sema-unused-def-lambda-noarg-formal"
+        ]
+      },
+      
+      "nixpkgs": {
+        "expr": "import (builtins.getFlake (builtins.toString ./.)).inputs.nixpkgs { }"
+      },
+
+      "options": {
+        "nixos": {
+          "expr": "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.nix-desktop.options"
+        },
+
+        "home-manager": {
+          "expr": "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.nix-desktop.options.home-manager.users.type.getSubOptions []"
+        }
+      },
+    }
+  }
+}

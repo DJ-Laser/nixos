@@ -1,9 +1,8 @@
 {
-    pkgs,
-    mkShell,
-    ...
+  pkgs,
+  mkShell,
+  ...
 }:
-
 mkShell {
-    packages = with pkgs; [alejandra];
+  packages = with pkgs; [alejandra nixd];
 }
