@@ -20,12 +20,9 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.packages = [cfg.package];
-
-    programs.niri = mkIf niriCfg.enable {
-      settings.spawn-at-startup = [
-        {command = ["${cfg.package}/bin/swww-daemon"];}
-      ];
+    services.swww = {
+      enable = true;
+      package = cfg.package;
     };
 
     home.activation = {
