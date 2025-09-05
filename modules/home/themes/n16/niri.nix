@@ -7,29 +7,12 @@
   namespace,
   ...
 }: let
-  n16 = config.${namespace}.themes.n16;
-  niri = config.${namespace}.desktops.niri;
+  theme-cfg = config.${namespace}.themes.n16;
+  niri-cfg = config.${namespace}.desktops.niri;
 
   colors = config.lib.stylix.colors;
 in {
-  config.programs.niri.settings = lib.mkIf (n16.enable
-    && niri.enable) {
-    screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
-    prefer-no-csd = true;
-
-    spawn-at-startup = [
-      {
-        command = ["${pkgs.xwayland-satellite}/bin/xwayland-satellite"];
-      }
-    ];
-
-    environment = {
-      # xwayland-satellite
-      DISPLAY = ":0";
-      # vscode and other apps don't want to default to wayland but work when forced
-      ELECTRON_OZONE_PLATFORM_HINT = "wayland";
-    };
-
+  config.programs.niri.settings = lib.mkIf (theme-cfg.enable && niri-cfg.enable) {
     layout = {
       focus-ring.enable = false;
       border = {
