@@ -31,12 +31,16 @@
     # Add some basic packages to the system
     environment.systemPackages = with pkgs; [
       git
-      vim
       wget
       curl
       zip
       unzip
     ];
+
+    programs.vim = {
+      enable = true;
+      defaultEditor = lib.mkDefault true;
+    };
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
     home-manager.backupFileExtension = "hm.bak";
