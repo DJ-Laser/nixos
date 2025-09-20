@@ -124,7 +124,7 @@ with actions; {
   "Mod+Shift+V".action = switch-focus-between-floating-and-tiling;
 
   # Columns
-  "Mod+Comma".action = consume-or-expel-window-left;
-  "Mod+Period".action = consume-or-expel-window-right;
+  "Mod+BracketLeft".action = consume-or-expel-window-left;
+  "Mod+BracketRight".action = consume-or-expel-window-right;
   "Mod+W".action = toggle-column-tabbed-display;
 }
