@@ -26,7 +26,6 @@
   # Enable RGB LED control
   services.hardware.openrgb.enable = true;
   services.cloudflare-warp.enable = true;
-  services.printing.enable = true;
   services.fwupd.enable = true;
 
   djlaser = {
