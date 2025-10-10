@@ -13,11 +13,11 @@ with actions; {
 
   # Audio controls
   "XF86AudioRaiseVolume" = {
-    action = spawn "wpctl" "set-volume" "-l" "1.0" "@DEFAULT_AUDIO_SINK@" "0.05+";
+    action = spawn "wpctl" "set-volume" "-l" "1.0" "@DEFAULT_AUDIO_SINK@" "0.025+";
     allow-when-locked = true;
   };
   "XF86AudioLowerVolume" = {
-    action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-";
+    action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.025-";
     allow-when-locked = true;
   };
   "XF86AudioMute" = {
