@@ -35,6 +35,8 @@ in {
           "[typescriptreact]" = {
             "editor.defaultFormatter" = "esbenp.prettier-vscode";
           };
+
+          "rust-analyzer.check.command" = "clippy";
         };
       };
     };
