@@ -2,8 +2,10 @@
   programs.git-credential-oauth.enable = true;
   programs.git = {
     enable = true;
-    userName = "DJ_Laser";
-    userEmail = "90146620+DJ-Laser@users.noreply.github.com";
+    settings.user = {
+      name = "DJ_Laser";
+      email = "90146620+DJ-Laser@users.noreply.github.com";
+    };
   };
 
   programs.firefox.enable = true;

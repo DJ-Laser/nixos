@@ -6,10 +6,10 @@
 }:
 with actions; {
   # Screenshot tool
-  "Print".action = screenshot;
   #FIXME change when niri-flake parser is fixed
+  "Print".action.screenshot = [];
   "Ctrl+Print".action.screenshot-screen = [];
-  "Alt+Print".action = screenshot-window;
+  "Alt+Print".action.screenshot-window = [];
 
   # Audio controls
   "XF86AudioRaiseVolume" = {
