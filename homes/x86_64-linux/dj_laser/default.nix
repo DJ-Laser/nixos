@@ -41,6 +41,7 @@
     sl
     prismlauncher
     yazi
+    wl-clipboard-rs
   ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
