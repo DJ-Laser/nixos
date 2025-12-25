@@ -76,7 +76,7 @@
       ];
 
       systems.hosts.nix-desktop.modules = with inputs; [
-        nixos-hardware.nixosModules.common-gpu-nvidia-nonprime
+        nixos-hardware.nixosModules.common-gpu-amd
         nixos-hardware.nixosModules.common-cpu-intel
       ];
 
