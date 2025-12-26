@@ -264,11 +264,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1765859036,
-        "narHash": "sha256-pP6DqXzslTFEH4L0HXD0icz2zY8V5e/CQ+tXVz1nNc0=",
+        "lastModified": 1765915786,
+        "narHash": "sha256-Hb+7xX0iIOokQ5zzVucVdhxh0dhFXkslNzl1guLdX84=",
         "owner": "DJ-Laser",
         "repo": "n16-shell",
-        "rev": "efcef0902a0f8e308ed851faac2785bf580f2874",
+        "rev": "4d7079b0ac3075961acf9f06970b0b3357214a33",
         "type": "github"
       },
       "original": {
