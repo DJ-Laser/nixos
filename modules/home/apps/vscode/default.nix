@@ -37,6 +37,8 @@ in {
           };
 
           "rust-analyzer.check.command" = "clippy";
+
+          "chat.disableAIFeatures" = true;
         };
       };
     };
