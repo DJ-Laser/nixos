@@ -27,6 +27,7 @@
 
     shells.bash.enable = true;
     tools.zoxide.enable = true;
+    tools.qemu.enable = true;
 
     services.syncthing.enable = true;
   };
