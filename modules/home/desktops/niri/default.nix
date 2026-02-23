@@ -34,17 +34,12 @@ in {
           inherit lib pkgs;
           actions = config.lib.niri.actions;
         };
-      }
-      (mkIf cfg.xwayland.enable {
-        spawn-at-startup = [{command = ["${pkgs.xwayland-satellite}/bin/xwayland-satellite"];}];
 
         environment = {
-          # xwayland-satellite
-          DISPLAY = ":0";
           # vscode and other apps don't want to default to wayland but work when forced
           ELECTRON_OZONE_PLATFORM_HINT = "wayland";
         };
-      })
+      }
     ];
   };
 }

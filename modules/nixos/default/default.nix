@@ -18,14 +18,13 @@
 
     # Enable direnv for automatic development environments
     programs.direnv = {
-      enable = true;
+      enable = lib.mkDefault true;
 
       nix-direnv = {
-        enable = true;
+        enable = lib.mkDefault true;
       };
     };
 
-    # Disable nano (VERY cringe)
     programs.nano.enable = false;
 
     # Add some basic packages to the system
@@ -35,14 +34,16 @@
       curl
       zip
       unzip
+      alejandra
+      nixd
     ];
 
     programs.vim = {
-      enable = true;
+      enable = lib.mkDefault true;
       defaultEditor = lib.mkDefault true;
     };
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
-    home-manager.backupFileExtension = "hm.bak";
+    home-manager.backupFileExtension = lib.mkDefault "hm.bak";
   };
 }

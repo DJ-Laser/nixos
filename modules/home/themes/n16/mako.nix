@@ -12,7 +12,7 @@
 in {
   config.services.mako = lib.mkIf (theme-cfg.enable && mako-cfg.enable) {
     settings = {
-      borderSize = 2;
+      border-size = 2;
       anchor = "bottom-right";
     };
   };
