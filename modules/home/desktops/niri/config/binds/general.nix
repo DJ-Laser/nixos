@@ -2,6 +2,7 @@
   lib,
   pkgs,
   actions,
+  screenLocker,
   ...
 }:
 with actions; {
@@ -33,6 +34,15 @@ with actions; {
 
   # Disable monitors until keypress or mouse activity
   "Mod+Shift+P".action = power-off-monitors;
+
+  #TODO this is not great
+  "Mod+Alt+L" =
+    if screenLocker != null
+    then {
+      hotkey-overlay.title = "Lock ";
+      action = spawn screenLocker;
+    }
+    else null;
 
   # Quit niri
   "Mod+Shift+E".action = quit;

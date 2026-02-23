@@ -9,7 +9,6 @@
 }: let
   inherit (lib) types mkEnableOption mkOption mkIf;
   cfg = config.${namespace}.desktops.components.swww;
-  niriCfg = config.${namespace}.desktops.niri;
 in {
   options.${namespace}.desktops.components.swww = {
     enable = mkEnableOption "enables swww wallpaper engine";
