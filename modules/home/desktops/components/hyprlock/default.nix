@@ -24,6 +24,9 @@ in {
     programs.hyprlock = {
       enable = true;
       package = cfg.package;
+      settings.auth = {
+        "pam:module" = "login";
+      };
     };
 
     ${namespace}.desktops.niri.screenLocker = "hyprlock";
