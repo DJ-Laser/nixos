@@ -3,8 +3,11 @@
   inputs,
   lib,
   ...
-}: {
-  den.hosts.x86_64-linux.laser-book = {
+}: let
+  system = "x86_64-linux";
+in {
+  systems = [system];
+  den.hosts.${system}.laser-book = {
     users = {
       dj_laser = {};
     };

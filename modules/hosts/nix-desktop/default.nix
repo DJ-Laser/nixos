@@ -2,8 +2,11 @@
   den,
   inputs,
   ...
-}: {
-  den.hosts.x86_64-linux.nix-desktop = {
+}: let
+  system = "x86_64-linux";
+in {
+  systems = [system];
+  den.hosts.${system}.nix-desktop = {
     users = {
       dj_laser = {};
     };

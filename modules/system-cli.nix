@@ -6,7 +6,6 @@
   den.aspects.system-cli = {
     includes = with den.aspects; [
       audio
-      bluetooth
       boot
       locale
       networking
