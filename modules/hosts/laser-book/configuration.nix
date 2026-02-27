@@ -13,14 +13,14 @@
   den.aspects.laser-book = {
     includes = with den.aspects; [
       system-cli
-      steam
       cloudflare-warp
+      steam
     ];
 
     nixos = {pkgs, ...}: {
+      hardware.facter.reportPath = ./_facter.json;
       imports = with inputs; [
         nixos-hardware.nixosModules.framework-13th-gen-intel
-        ./_hardware.nix
       ];
 
       hardware.graphics = {
@@ -37,8 +37,6 @@
         ports = [22];
       };
 
-      # Enable RGB LED control
-      services.hardware.openrgb.enable = true;
       services.fwupd.enable = true;
     };
   };
