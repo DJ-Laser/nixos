@@ -1,6 +1,6 @@
 {
-  flake.modules.homeManager.hypridle = {
-    services.hypridle = {
+  den.aspects.hypridle = {
+    homeManager.services.hypridle = {
       enable = true;
 
       settings = {

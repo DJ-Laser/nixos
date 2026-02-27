@@ -1,6 +1,6 @@
 {
-  flake.modules.homeManager.alacrity = {
-    programs.alacritty = {
+  den.aspects.alacrity = {
+    homeManager.programs.alacritty = {
       enable = true;
     };
   };

@@ -68,6 +68,21 @@
         "type": "github"
       }
     },
+    "den": {
+      "locked": {
+        "lastModified": 1771987101,
+        "narHash": "sha256-KYcI5XRdPoCvC6pmeZZTnYB6w472VDa1zxoCDSNcvPw=",
+        "owner": "vic",
+        "repo": "den",
+        "rev": "6ce35e108f838bdc7fee689e344fe876b4cdccbc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vic",
+        "repo": "den",
+        "type": "github"
+      }
+    },
     "fenix": {
       "inputs": {
         "nixpkgs": [
@@ -103,6 +118,21 @@
       "original": {
         "owner": "rafaelmardojai",
         "repo": "firefox-gnome-theme",
+        "type": "github"
+      }
+    },
+    "flake-aspects": {
+      "locked": {
+        "lastModified": 1771966223,
+        "narHash": "sha256-zMp0qVWcnjhLsu3FsAFWlUW+RaAIUXjoE0th+VQ45Ds=",
+        "owner": "vic",
+        "repo": "flake-aspects",
+        "rev": "5e6cea53f99677221a389477030f45633529184e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vic",
+        "repo": "flake-aspects",
         "type": "github"
       }
     },
@@ -405,6 +435,8 @@
     },
     "root": {
       "inputs": {
+        "den": "den",
+        "flake-aspects": "flake-aspects",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "homeslashmusic": "homeslashmusic",

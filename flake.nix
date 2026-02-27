@@ -11,6 +11,8 @@
 
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
+    flake-aspects.url = "github:vic/flake-aspects";
+    den.url = "github:vic/den";
 
     home-manager = {
       url = "github:nix-community/home-manager";

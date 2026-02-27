@@ -1,6 +1,6 @@
 {
-  flake.modules.homeManager.bash = {
-    programs.bash = {
+  den.aspects.bash = {
+    homeManager.programs.bash = {
       enable = true;
     };
   };

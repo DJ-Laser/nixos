@@ -1,12 +1,10 @@
-{inputs, ...}: {
-  flake.modules.nixos.system-cli = {
-    pkgs,
-    lib,
-    ...
-  }: {
-    imports = with inputs.self.modules.nixos; [
-      home-manager
-
+{
+  den,
+  inputs,
+  ...
+}: {
+  den.aspects.system-cli = {
+    includes = with den.aspects; [
       audio
       bluetooth
       boot
@@ -22,23 +20,29 @@
       nh
     ];
 
-    # Add some basic packages to the system
-    environment.systemPackages = with pkgs; [
-      git
-      wget
-      curl
-      zip
-      unzip
-      alejandra
-      nixd
-    ];
+    nixos = {
+      pkgs,
+      lib,
+      ...
+    }: {
+      # Add some basic packages to the system
+      environment.systemPackages = with pkgs; [
+        git
+        wget
+        curl
+        zip
+        unzip
+        alejandra
+        nixd
+      ];
 
-    programs.nano.enable = false;
-    programs.vim = {
-      enable = lib.mkDefault true;
-      defaultEditor = lib.mkDefault true;
+      programs.nano.enable = false;
+      programs.vim = {
+        enable = lib.mkDefault true;
+        defaultEditor = lib.mkDefault true;
+      };
+
+      nix.settings.experimental-features = ["nix-command" "flakes"];
     };
-
-    nix.settings.experimental-features = ["nix-command" "flakes"];
   };
 }

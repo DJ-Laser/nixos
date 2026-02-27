@@ -1,6 +1,6 @@
 {
-  flake.modules.homeManager.mako = {
-    services.mako = {
+  den.aspects.mako = {
+    homeManager.services.mako = {
       enable = true;
     };
   };

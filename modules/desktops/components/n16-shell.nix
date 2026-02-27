@@ -1,11 +1,19 @@
 {
-  flake.modules.homeManager.n16-shell = {pkgs, ...}: {
-    home.packages = [pkgs.n16-shell];
+  den.aspects.n16-shell = {
+    homeManager = {
+      inputs',
+      pkgs,
+      ...
+    }: let
+      package = inputs'.n16-shell.packages.n16-shell;
+    in {
+      home.packages = [package];
 
-    programs.niri = {
-      settings.spawn-at-startup = [
-        {command = ["${pkgs.n16-shell}/bin/n16-daemon"];}
-      ];
+      programs.niri = {
+        settings.spawn-at-startup = [
+          {command = ["${package}/bin/n16-daemon"];}
+        ];
+      };
     };
   };
 }

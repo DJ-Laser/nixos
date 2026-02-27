@@ -1,37 +1,43 @@
-{
-  flake.modules.homeManager.vscode = {pkgs, ...}: {
-    programs.vscode = {
-      enable = true;
-      package = pkgs.vscode.fhs;
-      profiles.default = {
-        enableExtensionUpdateCheck = false;
-        userSettings = {
-          "editor.tabSize" = 2;
-          "editor.formatOnSave" = true;
-          "editor.linkedEditing" = true;
+{den, ...}: {
+  den.aspects.vscode = {
+    includes = [
+      (den._.unfree ["vscode" "code"])
+    ];
 
-          "git.enableSmartCommit" = true;
-          "git.autofetch" = true;
-          "git.confirmSync" = false;
+    homeManager = {pkgs, ...}: {
+      programs.vscode = {
+        enable = true;
+        package = pkgs.vscode.fhs;
+        profiles.default = {
+          enableExtensionUpdateCheck = false;
+          userSettings = {
+            "editor.tabSize" = 2;
+            "editor.formatOnSave" = true;
+            "editor.linkedEditing" = true;
 
-          "[typescript]" = {
-            "editor.defaultFormatter" = "esbenp.prettier-vscode";
+            "git.enableSmartCommit" = true;
+            "git.autofetch" = true;
+            "git.confirmSync" = false;
+
+            "[typescript]" = {
+              "editor.defaultFormatter" = "esbenp.prettier-vscode";
+            };
+
+            "[typescriptreact]" = {
+              "editor.defaultFormatter" = "esbenp.prettier-vscode";
+            };
+
+            "rust-analyzer.check.command" = "clippy";
+
+            "chat.disableAIFeatures" = true;
           };
-
-          "[typescriptreact]" = {
-            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-          };
-
-          "rust-analyzer.check.command" = "clippy";
-
-          "chat.disableAIFeatures" = true;
         };
       };
-    };
 
-    xdg.configFile."code-flags.conf".text = ''
-      --enable-features=UseOzonePlatform
-      --ozone-platform=wayland
-    '';
+      xdg.configFile."code-flags.conf".text = ''
+        --enable-features=UseOzonePlatform
+        --ozone-platform=wayland
+      '';
+    };
   };
 }

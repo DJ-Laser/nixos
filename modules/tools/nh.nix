@@ -1,6 +1,6 @@
 {
-  flake.modules.nixos.direnv = {
-    programs.direnv = {
+  den.aspects.direnv = {
+    nixos.programs.direnv = {
       enable = true;
 
       nix-direnv = {

@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.coreutils = {pkgs}: let
+  den.aspects.coreutils.nixos = {pkgs}: let
     coreutils-full-name =
       "coreuutils-full-"
       + builtins.concatStringsSep ""

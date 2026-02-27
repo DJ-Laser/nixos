@@ -1,14 +1,20 @@
-{
-  flake.modules.nixos.steam = {
-    programs.steam = {
-      enable = true;
-      gamescopeSession.enable = true;
+{den, ...}: {
+  den.aspects.steam = {
+    includes = [
+      (den._.unfree ["steam" "steam-unwrapped"])
+    ];
 
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-      localNetworkGameTransfers.openFirewall = true;
+    nixos = {
+      programs.steam = {
+        enable = true;
+        gamescopeSession.enable = true;
+
+        remotePlay.openFirewall = true;
+        dedicatedServer.openFirewall = true;
+        localNetworkGameTransfers.openFirewall = true;
+      };
+
+      programs.gamemode.enable = true;
     };
-
-    programs.gamemode.enable = true;
   };
 }

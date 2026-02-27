@@ -1,16 +1,24 @@
 {
-  flake.modules.homeManager.homeslashmusic = {pkgs, ...}: {
-    home.packages = with pkgs; [homeslashmusic];
+  den.aspects.homeslashmusic = {
+    homeManager = {
+      inputs',
+      pkgs,
+      ...
+    }: let
+      package = inputs'.homeslashmusic.packages.homeslashmusic;
+    in {
+      home.packages = [package];
 
-    systemd.user.services.homeslashmusic = {
-      Unit = {
-        Description = "Start the homeslashmusic audio server.";
-      };
-      Install = {
-        WantedBy = ["default.target"];
-      };
-      Service = {
-        ExecStart = "${pkgs.homeslashmusic}/bin/hsm-server";
+      systemd.user.services.homeslashmusic = {
+        Unit = {
+          Description = "Start the homeslashmusic audio server.";
+        };
+        Install = {
+          WantedBy = ["default.target"];
+        };
+        Service = {
+          ExecStart = "${package}/bin/hsm-server";
+        };
       };
     };
   };
