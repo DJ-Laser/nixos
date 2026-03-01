@@ -26,8 +26,6 @@
       pkgs,
       ...
     }: {
-      stylix.targets.niri.enable = true;
-
       home.packages = [pkgs.xwayland-satellite];
 
       programs.niri.settings = {

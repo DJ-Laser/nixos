@@ -6,11 +6,13 @@
   username = "dj_laser";
   homeDirectory = "/home/${username}";
 in {
+  den.homes.x86_64-linux.dj_laser = {};
+
   den.aspects.dj_laser = {
     includes = with den.aspects; [
       (den._.unfree ["slack" "aseprite"])
       den._.primary-user
-      n16-theme
+      n16-theme._.home
 
       niri
       alacrity

@@ -15,6 +15,7 @@ in {
   den.aspects.nix-desktop = {
     includes = with den.aspects; [
       system-cli
+      n16-theme._.host
       steam
       cloudflare-warp
     ];

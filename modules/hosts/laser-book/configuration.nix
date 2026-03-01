@@ -16,6 +16,7 @@ in {
   den.aspects.laser-book = {
     includes = with den.aspects; [
       system-cli
+      n16-theme._.host
       cloudflare-warp
       steam
     ];
