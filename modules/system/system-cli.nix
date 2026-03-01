@@ -5,15 +5,11 @@
 }: {
   den.aspects.system-cli = {
     includes = with den.aspects; [
-      audio
-      boot
-      locale
       networking
       printing
-      time
-      xkb
-
       greetd
+      audio
+      boot
 
       direnv
       nh

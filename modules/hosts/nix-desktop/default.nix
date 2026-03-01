@@ -39,10 +39,16 @@ in {
         ports = [22];
       };
 
-      # Enable RGB LED control
       services.hardware.openrgb.enable = true;
-
       services.cloudflare-warp.enable = true;
+
+      time.timeZone = "America/New_York";
+      i18n.defaultLocale = "en_US.UTF-8";
+      console.keyMap = "us";
+      services.xserver.xkb = {
+        layout = "us";
+        variant = "";
+      };
     };
   };
 }
