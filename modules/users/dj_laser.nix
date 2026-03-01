@@ -1,8 +1,4 @@
-{
-  inputs,
-  den,
-  ...
-}: let
+{den, ...}: let
   username = "dj_laser";
   homeDirectory = "/home/${username}";
 in {
@@ -10,7 +6,7 @@ in {
 
   den.aspects.dj_laser = {
     includes = with den.aspects; [
-      (den._.unfree ["slack" "aseprite"])
+      (den._.unfree ["slack" "aseprite" "lastpass-password-manager"])
       den._.primary-user
       n16-theme._.home
 
@@ -48,7 +44,28 @@ in {
         };
       };
 
-      programs.firefox.enable = true;
+      programs.firefox = {
+        enable = true;
+        profiles.default = {
+          id = 0;
+          isDefault = true;
+
+          extensions.force = true;
+          extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
+            ublock-origin
+            lastpass-password-manager
+            indie-wiki-buddy
+            violentmonkey
+            youtube-shorts-block
+            youtube-suite-search-fixer
+          ];
+        };
+      };
+      stylix.targets.firefox = {
+        profileNames = ["default"];
+        colorTheme.enable = true;
+      };
+
       programs.ripgrep.enable = true;
       programs.fd.enable = true;
 
