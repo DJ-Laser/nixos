@@ -7,16 +7,13 @@ in {
   den.aspects.dj_laser = {
     includes = with den.aspects; [
       (den._.unfree ["slack" "aseprite" "lastpass-password-manager"])
+      (den._.user-shell "bash")
       den._.primary-user
       n16-theme._.home
 
       niri
-      alacrity
       vscode
-      btop
-      yazi
       homeslashmusic
-      bash
       zoxide
       syncthing
     ];
@@ -66,8 +63,13 @@ in {
         colorTheme.enable = true;
       };
 
+      programs.alacritty.enable = true;
+      programs.yazi.enable = true;
+      programs.btop.enable = true;
       programs.ripgrep.enable = true;
       programs.fd.enable = true;
+
+      home.shell.enableBashIntegration = true;
 
       services.mpris-proxy.enable = true;
       services.playerctld.enable = true;

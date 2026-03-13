@@ -5,7 +5,7 @@
 }: {
   den.aspects.stylix = den.lib.parametric.exactly {
     includes = [
-      ({host, ...}: {
+      ({host}: {
         nixos = {lib, ...}: {
           imports = [
             inputs.stylix.nixosModules.stylix
@@ -21,7 +21,7 @@
           };
         };
 
-        darwin = {lib, ...}: {
+        darwin = {lib}: {
           imports = [
             inputs.stylix.darwinModules.stylix
           ];
@@ -36,7 +36,8 @@
           };
         };
       })
-      ({home, ...}: {
+
+      ({home}: {
         homeManager = {lib, ...}: {
           imports = [
             inputs.stylix.homeModules.stylix

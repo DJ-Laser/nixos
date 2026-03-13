@@ -9,12 +9,19 @@
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
     };
 
-    flake-parts.url = "github:hercules-ci/flake-parts";
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
+
     import-tree.url = "github:vic/import-tree";
     flake-aspects.url = "github:vic/flake-aspects";
     den.url = "github:vic/den";
+
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -25,15 +32,6 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    /*
-    agenix = {
-      url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      #Don't download darwin deps (macos cringe)
-      inputs.darwin.follows = "";
-    };
-    */
 
     niri = {
       url = "github:sodiboo/niri-flake";
@@ -49,7 +47,5 @@
       url = "github:DJ-Laser/homeslashmusic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 }

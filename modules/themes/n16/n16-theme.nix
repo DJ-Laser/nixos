@@ -33,11 +33,11 @@
   };
 in {
   den.aspects.n16-theme = {
-    provides.host = den.lib.parametric {
+    provides.host = {
       includes = with den.aspects; [stylix {nixos = stylixModule;}];
     };
 
-    provides.home = den.lib.parametric {
+    provides.home = {
       includes = with den.aspects; [stylix {homeManager = stylixModule;}];
     };
   };
