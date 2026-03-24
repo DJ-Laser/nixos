@@ -1,5 +1,8 @@
 {den, ...}: {
   den.aspects.networking = {
-    nixos.networking.networkmanager.enable = true;
+    nixos = {
+      networking.networkmanager.enable = true;
+      networking.nftables.enable = true;
+    };
   };
 }
