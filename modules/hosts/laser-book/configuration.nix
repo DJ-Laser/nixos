@@ -22,7 +22,7 @@ in {
     ];
 
     nixos = {pkgs, ...}: {
-      hardware.facter.reportPath = ./_facter.json;
+      hardware.facter.reportPath = ./facter.json;
       imports = with inputs; [
         nixos-hardware.nixosModules.framework-13th-gen-intel
       ];
@@ -50,6 +50,10 @@ in {
         layout = "us";
         variant = "";
       };
+
+      environment.systemPackages = with pkgs; [
+        fw-ectool
+      ];
     };
   };
 }
