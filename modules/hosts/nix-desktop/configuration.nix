@@ -16,8 +16,8 @@ in {
     includes = with den.aspects; [
       system-cli
       n16-theme._.host
-      steam
       cloudflare-warp
+      steam
     ];
 
     nixos = {lib, ...}: {
