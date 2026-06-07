@@ -1,6 +1,6 @@
 {den, ...}: {
   den.aspects.n16-theme.provides.home.includes = with den.aspects; [
-    swww.stylixWallapaperOnActivate
+    awww.stylixWallapaperOnActivate
   ];
 
   den.aspects.n16-theme.provides.home.homeManager = {config, ...}: let

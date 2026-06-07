@@ -5,7 +5,7 @@
 }: {
   den.aspects.niri = {
     includes = with den.aspects; [
-      swww
+      awww
       mako
       n16-shell
       hypridle
