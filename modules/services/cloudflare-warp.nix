@@ -1,7 +1,7 @@
 {den, ...}: {
   den.aspects.cloudflare-warp = {
     includes = [
-      (den._.unfree ["cloudflare-warp"])
+      (den.batteries.unfree ["cloudflare-warp"])
     ];
 
     nixos = {

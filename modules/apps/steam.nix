@@ -1,7 +1,7 @@
 {den, ...}: {
   den.aspects.steam = {
     includes = [
-      (den._.unfree ["steam" "steam-unwrapped"])
+      (den.batteries.unfree ["steam" "steam-unwrapped"])
     ];
 
     nixos = {

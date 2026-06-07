@@ -6,10 +6,10 @@ in {
 
   den.aspects.dj_laser = {
     includes = with den.aspects; [
-      (den._.unfree ["slack" "aseprite" "lastpass-password-manager"])
-      (den._.user-shell "bash")
-      den._.primary-user
-      n16-theme._.home
+      (den.batteries.unfree ["slack" "aseprite" "lastpass-password-manager"])
+      (den.batteries.user-shell "bash")
+      den.batteries.primary-user
+      n16-theme.home
 
       niri
       vscode

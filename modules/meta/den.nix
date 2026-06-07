@@ -9,9 +9,9 @@
   ];
 
   den.default.includes = [
-    den._.define-user
-    den._.hostname
-    den._.inputs'
-    den._.self'
+    den.batteries.define-user
+    den.batteries.hostname
+    den.batteries.inputs'
+    den.batteries.self'
   ];
 }

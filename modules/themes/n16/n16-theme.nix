@@ -33,12 +33,16 @@
   };
 in {
   den.aspects.n16-theme = {
-    provides.host = {
-      includes = with den.aspects; [stylix {nixos = stylixModule;}];
+    provides.host = {host}: {
+      nixos = stylixModule;
+      includes = with den.aspects; [stylix];
     };
 
-    provides.home = {
-      includes = with den.aspects; [stylix {homeManager = stylixModule;}];
+    provides.home = {home}: {
+      homeManager = stylixModule;
+      includes = with den.aspects; [stylix];
     };
+
+    includes = with den.aspects.n16-theme; [host home];
   };
 }

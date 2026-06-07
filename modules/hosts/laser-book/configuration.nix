@@ -8,14 +8,14 @@ in {
   systems = [system];
   den.hosts.${system}.laser-book = {
     users = {
-      dj_laser = {};
+      dj_laser.classes = ["homeManager"];
     };
   };
 
   den.aspects.laser-book = {
     includes = with den.aspects; [
       system-cli
-      n16-theme._.host
+      n16-theme.host
       cloudflare-warp
       steam
     ];

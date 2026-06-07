@@ -1,7 +1,7 @@
 {den, ...}: {
   den.aspects.vscode = {
     includes = [
-      (den._.unfree ["vscode" "code"])
+      (den.batteries.unfree ["vscode" "code"])
     ];
 
     homeManager = {pkgs, ...}: {

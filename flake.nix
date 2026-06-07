@@ -18,8 +18,7 @@
     };
 
     import-tree.url = "github:vic/import-tree";
-    flake-aspects.url = "github:vic/flake-aspects";
-    den.url = "github:vic/den";
+    den.url = "github:vic/den/v0.17.0";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
