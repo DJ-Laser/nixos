@@ -5,6 +5,7 @@
 }: {
   den.aspects.system-cli = {
     includes = with den.aspects; [
+      usb-automount
       networking
       printing
       greetd
