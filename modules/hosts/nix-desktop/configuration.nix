@@ -21,10 +21,10 @@ in {
     ];
 
     nixos = {lib, ...}: {
+      hardware.facter.reportPath = ./facter.json;
       imports = with inputs; [
         nixos-hardware.nixosModules.common-gpu-amd
         nixos-hardware.nixosModules.common-cpu-intel
-        ./_hardware.nix
       ];
 
       hardware.graphics = {
