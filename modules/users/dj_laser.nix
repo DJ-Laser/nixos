@@ -16,6 +16,7 @@ in {
       homeslashmusic
       zoxide
       syncthing
+      usb-automount
     ];
 
     user = {
