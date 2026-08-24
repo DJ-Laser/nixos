@@ -21,10 +21,10 @@
             on-timeout = "loginctl lock-session";
           }
 
-          #{
-          #  timeout = 1200; # 20 min
-          #  on-timeout = "systemd suspend";
-          #}
+          {
+            timeout = 1200; # 20 min
+            on-timeout = "systemctl suspend";
+          }
         ];
       };
     };
