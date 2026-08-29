@@ -3,6 +3,7 @@
     homeManager = {
       inputs',
       pkgs,
+      lib,
       ...
     }: let
       package = inputs'.n16-shell.packages.n16-shell;
@@ -11,7 +12,7 @@
 
       programs.niri = {
         settings.spawn-at-startup = [
-          {command = ["${package}/bin/n16-daemon"];}
+          {command = [(lib.getExe' package "n16-daemon")];}
         ];
       };
     };

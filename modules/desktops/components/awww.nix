@@ -1,6 +1,7 @@
 {
   den,
   inputs,
+  lib,
   ...
 }: {
   den.aspects.awww = {
@@ -14,7 +15,7 @@
       homeManager = {config, ...}: {
         home.activation = {
           setWallpaper = inputs.home-manager.lib.hm.dag.entryAfter ["writeBoundary"] ''
-            run ${config.services.awww.package}/bin/awww img "${config.stylix.image}" \
+            run ${lib.getExe config.services.awww.package} img "${config.stylix.image}" \
               --transition-fps 60 \
               --transition-duration 2 \
               --transition-type random \

@@ -3,6 +3,7 @@
     homeManager = {
       inputs',
       pkgs,
+      lib,
       ...
     }: let
       package = inputs'.homeslashmusic.packages.homeslashmusic;
@@ -17,7 +18,7 @@
           WantedBy = ["default.target"];
         };
         Service = {
-          ExecStart = "${package}/bin/hsm-server";
+          ExecStart = lib.getExe' package "hsm-server";
         };
       };
     };

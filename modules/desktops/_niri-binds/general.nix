@@ -14,7 +14,7 @@ with actions; {
   };
   "Mod+Shift+T" = {
     hotkey-overlay.title = "Silly :3";
-    action = spawn "alacritty" "-e" "${pkgs.cmatrix}/bin/cmatrix";
+    action = spawn "alacritty" "-e" "${lib.getExe pkgs.cmatrix}";
   };
   "Mod+D" = {
     hotkey-overlay.title = "Open the N16 Launcher";
