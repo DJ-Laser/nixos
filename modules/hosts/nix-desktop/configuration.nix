@@ -27,6 +27,8 @@ in {
         nixos-hardware.nixosModules.common-cpu-intel
       ];
 
+      powerManagement.cpuFreqGovernor = "performance";
+
       hardware.graphics = {
         enable = true;
       };
@@ -40,7 +42,6 @@ in {
       };
 
       services.hardware.openrgb.enable = true;
-      services.cloudflare-warp.enable = true;
 
       time.timeZone = "America/New_York";
       i18n.defaultLocale = "en_US.UTF-8";
