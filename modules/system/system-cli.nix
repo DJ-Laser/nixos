@@ -28,6 +28,7 @@
         curl
         zip
         unzip
+        unar
         alejandra
         nixd
       ];
