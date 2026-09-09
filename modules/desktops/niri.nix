@@ -13,11 +13,7 @@
     ];
 
     nixos = {
-      imports = [
-        inputs.niri.nixosModules.niri
-      ];
-
-      programs.niri.enable = true;
+      environment.pathsToLink = ["/share/xdg-desktop-portal"];
     };
 
     homeManager = {
@@ -26,7 +22,12 @@
       pkgs,
       ...
     }: {
+      imports = [
+        inputs.niri.homeModules.niri
+      ];
+
       home.packages = [pkgs.xwayland-satellite];
+      programs.niri.enable = true;
 
       programs.niri.settings = {
         prefer-no-csd = true;
