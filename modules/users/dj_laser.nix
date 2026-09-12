@@ -17,6 +17,7 @@ in {
       zoxide
       syncthing
       usb-automount
+      direnv
     ];
 
     user = {
