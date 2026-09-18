@@ -3,7 +3,6 @@
     homeManager = {pkgs, ...}: {
       services.syncthing = {
         enable = true;
-        extraOptions = ["--no-default-folder"];
 
         settings = {
           devices = {
@@ -15,8 +14,8 @@
               id = "TSEDB76-4JPPNAX-ZE5IVBR-2IOZYWR-SQIRNIN-JR4KSDK-OJB4GOG-UCOU4AK";
             };
 
-            pixel = {
-              id = "PO4DNS7-3ND5TNH-BGOAROM-V3Q64EK-EL7VLGS-6ISCNYV-TWROR4R-V3BLRAC";
+            pixel-3 = {
+              id = "JWAUJWG-BETTPCF-XROIYBE-V45L6G2-WLMEXFK-6C7BBQE-VD6ALBZ-GRLODQK";
             };
           };
 
