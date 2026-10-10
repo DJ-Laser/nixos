@@ -9,15 +9,16 @@ in {
       (den.batteries.unfree ["slack" "aseprite" "lastpass-password-manager"])
       (den.batteries.user-shell "bash")
       den.batteries.primary-user
-      n16-theme.home
 
-      niri
+      scrolling-wm
       vscode
       homeslashmusic
       zoxide
       syncthing
       usb-automount
       direnv
+      tui-file-manager
+      btop
     ];
 
     user = {
@@ -66,8 +67,6 @@ in {
       };
 
       programs.alacritty.enable = true;
-      programs.yazi.enable = true;
-      programs.btop.enable = true;
       programs.ripgrep.enable = true;
       programs.fd.enable = true;
 

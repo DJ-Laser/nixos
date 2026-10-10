@@ -25,7 +25,7 @@
               path = "~/Music";
               label = "Music";
 
-              devices = ["nix-desktop" "laser-book" "pixel"];
+              devices = ["nix-desktop" "laser-book" "pixel-3"];
             };
           };
         };

@@ -8,7 +8,7 @@
       usb-automount
       networking
       printing
-      greetd
+      greeter
       audio
       boot
 
@@ -29,6 +29,7 @@
         zip
         unzip
         unar
+        file
         alejandra
         nixd
       ];

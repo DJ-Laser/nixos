@@ -1,5 +1,5 @@
 {
-  den.aspects.hyprlock = {
+  den.aspects.lock-screen = {
     homeManager = {
       programs.hyprlock = {
         enable = true;

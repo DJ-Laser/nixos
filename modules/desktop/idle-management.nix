@@ -1,5 +1,5 @@
 {
-  den.aspects.hypridle = {
+  den.aspects.idle-management = {
     homeManager.services.hypridle = {
       enable = true;
 

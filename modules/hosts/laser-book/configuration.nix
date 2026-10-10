@@ -16,7 +16,6 @@ in {
     includes = with den.aspects; [
       framework.intel-13
       system-cli
-      n16-theme.host
       cloudflare-warp
       locale
       steam
