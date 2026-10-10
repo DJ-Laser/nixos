@@ -18,7 +18,7 @@
     };
 
     import-tree.url = "github:vic/import-tree";
-    den.url = "github:vic/den/v0.18.0";
+    den.url = "github:vic/den/v0.19.0";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
