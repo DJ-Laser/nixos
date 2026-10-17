@@ -15,9 +15,10 @@ in {
   den.aspects.nix-desktop = {
     includes = with den.aspects; [
       system-cli
-      cloudflare-warp
       locale
+      cloudflare-warp
       steam
+      android-emulation
     ];
 
     nixos = {lib, ...}: {

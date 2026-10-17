@@ -16,9 +16,10 @@ in {
     includes = with den.aspects; [
       framework.intel-13
       system-cli
-      cloudflare-warp
       locale
+      cloudflare-warp
       steam
+      android-emulation
     ];
 
     nixos = {pkgs, ...}: {
