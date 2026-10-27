@@ -12,7 +12,7 @@
       ];
     };
 
-    provides.intel-13 = {
+    intel-13 = {
       includes = [den.aspects.framework];
 
       nixos = {pkgs, ...}: {

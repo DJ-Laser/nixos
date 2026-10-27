@@ -66,6 +66,14 @@
             };
           };
         };
+
+        window-rules = [
+          {
+            matches = [{app-id = "termfilechooser";}];
+            open-floating = true;
+            open-focused = true;
+          }
+        ];
       };
 
       home.sessionVariables = {

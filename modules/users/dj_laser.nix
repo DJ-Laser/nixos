@@ -17,7 +17,7 @@ in {
       syncthing
       usb-automount
       direnv
-      tui-file-manager
+      tui-file-manager.as_system_file_manager
       btop
     ];
 
