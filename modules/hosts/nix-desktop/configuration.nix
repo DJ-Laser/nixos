@@ -19,6 +19,7 @@ in {
       cloudflare-warp
       steam
       android-emulation
+      septabee
     ];
 
     nixos = {lib, ...}: {

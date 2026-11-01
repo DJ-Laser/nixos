@@ -47,5 +47,10 @@
       url = "github:DJ-Laser/homeslashmusic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    septabee = {
+      url = "github:Ap6661/septabee-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 }

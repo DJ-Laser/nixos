@@ -473,6 +473,7 @@
         "nixpkgs": "nixpkgs_2",
         "nur": "nur",
         "pkgs-by-name-for-flake-parts": "pkgs-by-name-for-flake-parts",
+        "septabee": "septabee",
         "stylix": "stylix"
       }
     },
@@ -511,6 +512,26 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "septabee": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792203302,
+        "narHash": "sha256-xBoaPUalFhKmQPU25tzW0rRzrvLpEfgpofP4rjz842I=",
+        "owner": "Ap6661",
+        "repo": "septabee-flake",
+        "rev": "bf52b2e9587c2b211fdbf6ec78870e8559a2a1c3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Ap6661",
+        "repo": "septabee-flake",
         "type": "github"
       }
     },
