@@ -69,7 +69,7 @@
 
         window-rules = [
           {
-            matches = [{app-id = "termfilechooser";}];
+            matches = [{app-id = "ttypicker";}];
             open-floating = true;
             open-focused = true;
           }

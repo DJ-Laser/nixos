@@ -9,26 +9,56 @@
         den.aspects.tui-file-manager
       ];
 
-      homeManager = {pkgs, ...}: let
-        xdgPortalPackage = pkgs.xdg-desktop-portal-termfilechooser;
-      in {
-        xdg.portal = {
-          extraPortals = [
-            xdgPortalPackage
-          ];
+      homeManager = {
+        pkgs,
+        self',
+        ...
+      }: {
+        programs.yazi = {
+          plugins = {
+            filechooser = {
+              package = self'.packages.filechooser-yazi;
+              setup = true;
+              settings = {
+                overwrite_dialog = true;
+              };
+            };
+          };
 
-          config.common = {
-            "org.freedesktop.impl.portal.FileChooser" = ["termfilechooser"];
+          keymap = {
+            /*
+              mgr.prepend_keymap = [
+              {
+                on = "<Enter>";
+                run = "plugin filechooser";
+                desc = "Open/choose the selected files or folders, or the hovered one if non selected";
+              }
+              {
+                on = "o";
+                run = "plugin filechooser";
+                desc = "Open/choose the selected files or folders, or the hovered one if non selected";
+              }
+            ];
+            */
           };
         };
 
-        xdg.configFile."xdg-desktop-portal-termfilechooser/config".text = let
-          terminal = "alacritty --class termfilechooser -e";
-          script = "${xdgPortalPackage}/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh";
+        xdg.portal = {
+          extraPortals = [
+            self'.packages.ttypicker
+          ];
+
+          config.common = {
+            "org.freedesktop.impl.portal.FileChooser" = ["ttypicker"];
+          };
+        };
+
+        xdg.configFile."ttypicker/config.toml".text = let
         in ''
-          [filechooser]
-          cmd=${script}
-          env=TERMCMD='${terminal}'
+          [FileChooser]
+          term="alacritty --class ttypicker --title {TITLE} -e"
+          exec="yazi --chooser-file={OUT_PATH} {IN_PATH}"
+          in_path="{SUGGESTED_PATH}"
         '';
       };
     };
