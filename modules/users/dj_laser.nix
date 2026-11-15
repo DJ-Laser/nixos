@@ -20,6 +20,7 @@ in {
       tui-file-manager.as_system_file_manager
       btop
       picard
+      podman
     ];
 
     user = {
