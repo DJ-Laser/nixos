@@ -19,6 +19,7 @@ in {
       direnv
       tui-file-manager.as_system_file_manager
       btop
+      picard
     ];
 
     user = {
