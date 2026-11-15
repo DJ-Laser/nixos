@@ -6,7 +6,8 @@
   system = "x86_64-linux";
 in {
   systems = [system];
-  den.hosts.${system}.nix-desktop = {
+  den.hosts.nix-desktop = {
+    inherit system;
     users = {
       dj_laser.classes = ["homeManager"];
     };

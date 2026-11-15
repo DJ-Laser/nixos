@@ -1,4 +1,5 @@
 {
+  lib,
   den,
   inputs,
   ...
@@ -35,11 +36,7 @@ in {
   den.default.includes = [den.aspects.theming];
 
   den.aspects.theming = {
-    os = {
-      host,
-      lib,
-      ...
-    }: {
+    os = {host, ...}: {
       imports = [
         inputs.stylix.nixosModules.stylix
         themeModule
@@ -55,11 +52,7 @@ in {
       };
     };
 
-    homeManager = {
-      home,
-      lib,
-      ...
-    }: {
+    homeManager = {home, ...}: {
       imports = [
         inputs.stylix.homeModules.stylix
         themeModule

@@ -12,8 +12,10 @@
       lock-screen
     ];
 
-    nixos = {
-      environment.pathsToLink = ["/share/xdg-desktop-portal"];
+    provides.to-hosts = {
+      nixos = {
+        environment.pathsToLink = ["/share/xdg-desktop-portal"];
+      };
     };
 
     homeManager = {
