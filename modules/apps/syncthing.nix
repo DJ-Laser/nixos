@@ -14,8 +14,8 @@
               id = "TSEDB76-4JPPNAX-ZE5IVBR-2IOZYWR-SQIRNIN-JR4KSDK-OJB4GOG-UCOU4AK";
             };
 
-            pixel-3 = {
-              id = "JWAUJWG-BETTPCF-XROIYBE-V45L6G2-WLMEXFK-6C7BBQE-VD6ALBZ-GRLODQK";
+            pixel-9 = {
+              id = "QQP4X3E-7HWZH74-6OHOIQ4-YGENZIX-5QG7IY2-MRRWVOP-IAJ2FWI-R55J7QN";
             };
           };
 
@@ -25,7 +25,7 @@
               path = "~/Music";
               label = "Music";
 
-              devices = ["nix-desktop" "laser-book" "pixel-3"];
+              devices = ["nix-desktop" "laser-book" "pixel-9"];
             };
           };
         };
